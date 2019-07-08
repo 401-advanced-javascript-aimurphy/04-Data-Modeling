@@ -5,18 +5,17 @@
 ### Author: Ai
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+* [submission PR](https://github.com/401-advanced-javascript-aimurphy/04-Data-Modeling/pull/4)
 * [![Build Status](https://travis-ci.com/401-advanced-javascript-aimurphy/04-Data-Modeling.svg?branch=master)](https://travis-ci.com/401-advanced-javascript-aimurphy/04-Data-Modeling)
 
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
+* 
 
 ### Modules
-#### `modulename.js`
+#### `memory.js` `categories.js` `products.js`
 ##### Exported Values and Methods
+###### `model.get` `model.create` `model.delete` `model.update`
 
 ###### `foo(thing) -> string`
 Usage Notes or examples
