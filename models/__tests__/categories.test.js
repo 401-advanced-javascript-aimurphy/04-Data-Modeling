@@ -26,6 +26,7 @@ describe('Categories Model', () => {
       .then(record => {
         Object.keys(obj).forEach(key => {
           expect(record[key]).toEqual(obj[key]);
+          console.log('create', record[key],'record=obj',obj[key])
         });
       })
       .catch(e => console.error('ERR', e));
@@ -39,9 +40,38 @@ describe('Categories Model', () => {
           .then(category => {
             Object.keys(obj).forEach(key => {
               expect(category[0][key]).toEqual(obj[key]);
+              console.log('get',category[0][key],'cat=obj', obj[key], 'cat',category, 'obj', obj)
             });
           });
       });
   });
 
+  it('can delete() a category', () => {
+    let obj = { name: 'Test Category' };
+    return categories.create(obj)
+      .then(record => {
+        return categories.delete(record._id)
+          .then(category => {
+            Object.keys(obj).forEach(key => {
+              expect(category).toBeUndefined();
+              console.log('delete', obj[key], category);
+            });
+          });
+      });
+  });
+
+  it('can update() a category', () => {
+    let obj = { name: 'Test Category' };
+    return categories.create(obj)
+      .then(record => {
+        return categories.update(record._id)
+          .then(record => {
+            Object.keys(obj).forEach(key => {
+              expect(record[key]).toEqual(obj[key]);
+              console.log('create', record[key],'record=obj',obj[key])
+            });
+          });
+      })
+      .catch(e => console.error('ERR', e));
+  });
 });
