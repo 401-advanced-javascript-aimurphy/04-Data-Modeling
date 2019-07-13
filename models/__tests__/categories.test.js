@@ -1,4 +1,5 @@
 const Categories = require('../categories/categories.js');
+const Products = require('../products/products.js');
 
 describe('Categories Model', () => {
 
