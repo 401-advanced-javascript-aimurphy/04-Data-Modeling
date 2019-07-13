@@ -36,6 +36,16 @@ class Model {
     let valid = true;
     let record = {};
 
+    if(typeof entry ==="boolean"){
+      valid = true;
+    }else if(typeof entry === "string"){
+      valid = true;
+    }else if(typeof entry === "number"){
+      valid = true;
+    }else{
+      valid = false;
+    }
+
     Object.keys(this.schema).forEach(field => {
       if (this.schema[field].required) {
         if (entry[field]) {
