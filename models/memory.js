@@ -33,14 +33,16 @@ class Model {
 
   sanitize(entry) {
 
+    console.log('entry is',entry);
+
     let valid = true;
     let record = {};
 
-    if(typeof entry ==="boolean"){
+    if(typeof entry.name ==="boolean"){
       valid = true;
-    }else if(typeof entry === "string"){
+    }else if(typeof entry.name === "string"){
       valid = true;
-    }else if(typeof entry === "number"){
+    }else if(typeof entry.name === "number"){
       valid = true;
     }else{
       valid = false;
