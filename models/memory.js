@@ -38,11 +38,11 @@ class Model {
     let valid = true;
     let record = {};
 
-    if(typeof entry.name ==="boolean"){
+    if(typeof entry.name ==='boolean'){
       valid = true;
-    }else if(typeof entry.name === "string"){
+    }else if(typeof entry.name === 'string'){
       valid = true;
-    }else if(typeof entry.name === "number"){
+    }else if(typeof entry.name === 'number'){
       valid = true;
     }else{
       valid = false;
